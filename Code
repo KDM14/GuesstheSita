@@ -1,0 +1,215 @@
+import java.util.*;
+/*this project is completly done by Pavani,likhita*/
+public class Code 
+{
+	int score;
+
+	static int equalsto(String value,int score,int count) {
+		if(value=="Sita") {
+			if(count==1) {
+				score=score+0;
+				}
+			else{
+				score=score+1000;
+				}
+		}
+		else if(value=="Ramudu") {
+			if(count==0) {
+				score=score+0;
+			}
+			else{
+				score=score+1000;
+			}
+		}
+		else if(value=="Laxamana") {
+			score=score+900;
+		}
+		else if(value=="Hanumana") {
+			score=score+800;
+		}
+		else if(value=="Bharata") {
+			score=score+700;
+		}
+		else if(value=="Shatrughna") {
+			score=score+600;
+		}
+		return score;
+		
+	}
+
+public static void main(String args[]) 
+{
+	int score1=0;
+	int score2=0;
+	int score3=0;
+	int score4=0;
+	int score5=0;
+	int score6=0;
+	int n;
+	int count=0;
+
+	Scanner sc=new Scanner(System.in);
+	
+	System.out.println("Enter name of "+ 1 +" Player:");
+	String person1 =sc.next();
+	System.out.println("Enter name of "+ 2 +" Player:");
+	String person2 =sc.next();
+	System.out.println("Enter name of "+ 3 +" Player:");
+	String person3 =sc.next();
+	System.out.println("Enter name of "+ 4 +" Player:");
+	String person4 =sc.next();
+	System.out.println("Enter name of "+ 5 +" Player:");
+	String person5 =sc.next();
+	System.out.println("Enter name of "+ 6 +" Player:");
+	String person6 =sc.next();
+
+	do {
+		ArrayList<String> arr= new ArrayList<String>();
+		arr.add("Sita");
+		arr.add("Ramudu");
+		arr.add("Laxamana");
+		arr.add("Hanumana");
+		arr.add("Bharata");
+		arr.add("Shatrughna");
+		Random ran=new Random();
+		ArrayList<String> arrcopy=arr;
+		
+		String value1=arrcopy.get(ran.nextInt(arrcopy.size()));
+		if(value1=="Ramudu") {
+			System.out.println("The rama is:"+person1);
+		}
+		arrcopy.remove(value1);
+		String value2=arrcopy.get(ran.nextInt(arrcopy.size()));
+		arrcopy.remove(value2);
+		if(value2=="Ramudu") {
+			System.out.println("The rama is:"+person2);
+		}
+		
+		String value3=arrcopy.get(ran.nextInt(arrcopy.size()));
+		arrcopy.remove(value3);
+		if(value3=="Ramudu") {
+			System.out.println("The rama is:"+person3);
+		}
+				
+		String value4=arrcopy.get(ran.nextInt(arrcopy.size()));
+		arrcopy.remove(value4);
+		if(value4=="Ramudu") {
+			System.out.println("The rama is:"+person4);
+		}
+		
+		String value5=arrcopy.get(ran.nextInt(arrcopy.size()));
+		arrcopy.remove(value5);
+		if(value5=="Ramudu") {
+			System.out.println("The rama is:"+person5);
+		}
+		
+		String value6=arrcopy.get(ran.nextInt(arrcopy.size()));
+		arrcopy.remove(value6);
+		if(value6=="Ramudu") {
+			System.out.println("The rama is:"+person6);
+			
+		}
+		
+		System.out.println("Rama.. Guess the sita");
+		String a=sc.next();
+		if(a.equals(person1)) {
+			if(value1=="Sita"){
+				count=1;
+				System.out.println("Great..You have gussed the right answer!!");
+			}
+			else {
+				System.out.println("Shitt.. thats a Wrong guess!!");
+			}
+		}
+		else if(a.equals(person2)){
+			if(value2=="Sita") {
+				count=1;
+				System.out.println("Great..You have gussed the right answer!!");
+			}
+			else {
+				System.out.println("Shitt.. thats a Wrong guess!!");
+			}
+		}
+		else if(a.equals(person3)) {
+			if(value3=="Sita") {
+				count=1;
+				System.out.println("Great..You have gussed the right answer!!");
+			}
+			else {
+				System.out.println("Shitt.. thats a Wrong guess!!");
+			}
+		}
+		else if(a.equals(person4)) {
+			if(value4=="Sita") {
+				count=1;
+				System.out.println("Great..You have gussed the right answer!!");
+				
+			}
+			else {
+				System.out.println("Shitt.. thats a Wrong guess!!");
+			}
+		}
+		else if(a.equals(person5)) {
+			if(value5=="Sita") {
+				count=1;
+				System.out.println("Great..You have gussed the right answer!!");
+				
+			}
+			else {
+				System.out.println("Shitt.. thats a Wrong guess!!");
+			}
+		}
+		else if(a.equals(person6)) {
+			if(value6=="Sita") {
+				count=1;
+				System.out.println("Great..You have gussed the right answer!!");
+			}
+			else {
+				System.out.println("Shitt.. thats a Wrong guess!!");
+			}
+		}
+		score1=equalsto(value1,score1,count);
+		score2=equalsto(value2,score2,count);
+		score3=equalsto(value3,score3,count);
+		score4=equalsto(value4,score4,count);
+		score5=equalsto(value5,score5,count);
+		score6=equalsto(value6,score6,count);
+		count=0;
+		if(value1=="Sita") {
+			System.out.println("Sita is :"+person1);
+		}
+		else if(value2=="Sita") {
+			System.out.println("Sita is :"+person2);
+		}
+		else if(value3=="Sita") {
+			System.out.println("Sita is :"+person3);
+		}
+		else if(value4=="Sita") {
+			System.out.println("Sita is :"+person4);
+		}
+		else if(value5=="Sita") {
+			System.out.println("Sita is :"+person5);
+		}
+		else if(value6=="Sita") {
+			System.out.println("Sita is :"+person6);
+		}
+		System.out.println(person1+" is "+value1);
+		System.out.println(person2+" is "+value2);
+		System.out.println(person3+" is "+value3);
+		System.out.println(person4+" is "+value4);
+		System.out.println(person5+" is "+value5);
+		System.out.println(person6+" is "+value6);
+		System.out.println("Do you want to play again?? if yes press 1");
+		n=sc.nextInt();
+	}
+	while(n==1);
+	
+		System.out.println("The Final Scores are ");
+		System.out.println(person1+":"+score1);
+		System.out.println(person2+":"+score2);
+		System.out.println(person3+":"+score3);
+		System.out.println(person4+":"+score4);
+		System.out.println(person5+":"+score5);
+		System.out.println(person6+":"+score6);	
+}
+}
